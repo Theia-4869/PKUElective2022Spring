@@ -39,7 +39,8 @@ class TTShituRecognizer(object):
         data = {
             "username": self._config.uname, 
             "password": self._config.pwd,
-            "image": encode
+            "image": encode,
+            "typeid": 1003,
         }
         try:
             result = json.loads(requests.post(TTShituRecognizer._RECOGNIZER_URL, json=data, timeout=20).text)
